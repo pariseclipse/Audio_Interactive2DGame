@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dlmmggj8vyrqt"]
+[gd_scene load_steps=20 format=3 uid="uid://dlmmggj8vyrqt"]
 
 [ext_resource type="Script" path="res://TitleGrid.gd" id="1_rhtic"]
 [ext_resource type="Texture2D" uid="uid://b4i8a4egke73d" path="res://post1.png" id="2_l4jbo"]
@@ -7,13 +7,14 @@
 [ext_resource type="Script" path="res://DiscoBall.gd" id="5_jiaq8"]
 [ext_resource type="Texture2D" uid="uid://f2cdlcfqg7w8" path="res://pose3.png" id="5_nmpoh"]
 [ext_resource type="Texture2D" uid="uid://dyawdk0yq6qnq" path="res://drink.png" id="6_trl4i"]
-[ext_resource type="AudioStream" uid="uid://dx6yey0ymgljk" path="res://apt.mp3" id="6_wgasa"]
+[ext_resource type="AudioStream" uid="uid://dx6yey0ymgljk" path="res://audio/apt.mp3" id="6_wgasa"]
 [ext_resource type="Texture2D" uid="uid://c0tuc4y5bvx4s" path="res://disco.png" id="7_efucq"]
 [ext_resource type="Texture2D" uid="uid://byuh0t4oahobn" path="res://room.png" id="7_ud5vg"]
 [ext_resource type="Texture2D" uid="uid://boesmba235hwh" path="res://danceButton.png" id="10_qsbs3"]
 [ext_resource type="Script" path="res://Button.gd" id="11_6ohpv"]
 [ext_resource type="Script" path="res://bar_trigger.gd" id="12_452v3"]
 [ext_resource type="Texture2D" uid="uid://c0qw4exral5jg" path="res://dj.png" id="14_q4x77"]
+[ext_resource type="Script" path="res://DJBoothTrigger.gd" id="15_dkkfo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1fin2"]
 animations = [{
@@ -42,6 +43,9 @@ size = Vector2(396.734, 579.368)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g8kd0"]
 size = Vector2(462, 208)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m7oxk"]
+size = Vector2(522.401, 445.187)
 
 [node name="DiscoGame" type="Node2D"]
 
@@ -296,7 +300,6 @@ animation = &"dance"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 light_mask = 3
 position = Vector2(-1897.89, 1104.84)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xgoq0")
 
 [node name="DrinkSprite" type="Sprite2D" parent="Player"]
@@ -367,12 +370,46 @@ offset_right = 195.0
 offset_bottom = 125.0
 text = "Yes"
 
+[node name="Popup2" type="Panel" parent="."]
+visible = false
+offset_left = -263.0
+offset_top = 60.0
+offset_right = 52.0
+offset_bottom = 204.0
+
+[node name="Label" type="Label" parent="Popup2"]
+layout_mode = 0
+offset_right = 313.0
+offset_bottom = 138.0
+text = "Would you like to play a new song?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="Popup2"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 94.0
+offset_right = 195.0
+offset_bottom = 125.0
+text = "Play"
+
 [node name="DJBooth" type="Sprite2D" parent="."]
 position = Vector2(491, 297)
 scale = Vector2(0.455589, 0.352661)
 texture = ExtResource("14_q4x77")
 
+[node name="DJBoothTrigger" type="Area2D" parent="DJBooth"]
+script = ExtResource("15_dkkfo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DJBooth/DJBoothTrigger"]
+position = Vector2(-10.9747, 24.1025)
+shape = SubResource("RectangleShape2D_m7oxk")
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="body_entered" from="BarTrigger" to="BarTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="BarTrigger" to="BarTrigger" method="_on_body_exited"]
 [connection signal="pressed" from="Popup/YesButton" to="BarTrigger" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="Popup2/PlayButton" to="BarTrigger" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="Popup2/PlayButton" to="DJBooth/DJBoothTrigger" method="_on_play_button_pressed"]
+[connection signal="body_entered" from="DJBooth/DJBoothTrigger" to="DJBooth/DJBoothTrigger" method="_on_body_entered"]
+[connection signal="body_exited" from="DJBooth/DJBoothTrigger" to="DJBooth/DJBoothTrigger" method="_on_body_exited"]
