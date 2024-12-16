@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://boesmba235hwh" path="res://danceButton.png" id="10_qsbs3"]
 [ext_resource type="Script" path="res://Button.gd" id="11_6ohpv"]
 [ext_resource type="Script" path="res://bar_trigger.gd" id="12_452v3"]
-[ext_resource type="Texture2D" uid="uid://c0qw4exral5jg" path="res://dj.png" id="14_q4x77"]
+[ext_resource type="Texture2D" uid="uid://bdkmmqgfaymvv" path="res://djbooth.png" id="14_bitdc"]
 [ext_resource type="Script" path="res://DJBoothTrigger.gd" id="15_dkkfo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1fin2"]
@@ -394,9 +394,9 @@ offset_bottom = 125.0
 text = "Play"
 
 [node name="DJBooth" type="Sprite2D" parent="."]
-position = Vector2(491, 297)
+position = Vector2(473, 309)
 scale = Vector2(0.455589, 0.352661)
-texture = ExtResource("14_q4x77")
+texture = ExtResource("14_bitdc")
 
 [node name="DJBoothTrigger" type="Area2D" parent="DJBooth"]
 script = ExtResource("15_dkkfo")
@@ -404,6 +404,7 @@ script = ExtResource("15_dkkfo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DJBooth/DJBoothTrigger"]
 position = Vector2(-10.9747, 24.1025)
 shape = SubResource("RectangleShape2D_m7oxk")
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="body_entered" from="BarTrigger" to="BarTrigger" method="_on_body_entered"]
