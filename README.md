@@ -70,7 +70,7 @@ The project is designed to showcase Godot's **2D capabilities**, lighting effect
 - **"Yes" Button at the Bar**: Character holds a drink.
 - **Volume Buttons**: To increase and decrease music volume.
 - **DJ Booth**: Trigger a pop-up to play a new song.
-- 
+  
 ---
 
 ### **🎨 Assets**
@@ -101,11 +101,11 @@ While building this project, several challenges were faced, each providing me ma
 
 1. **Managing Layering Issues**  
    - Initially, the player character and interactive objects (e.g., the DJ booth) would appear **under the floor or behind other assets**.  
-   - This was resolved by carefully organizing the **Z-index** of nodes and using Godot’s **Y-Sort** property to ensure proper layering based on position.
+   - This was resolved by carefully organising the **Z-index** of nodes and using Godot’s **Y-Sort** property to ensure proper layering based on position.
 
 2. **Dynamic Lighting Effects**  
    - Creating realistic **flashing lights** in a 2D environment required trial and error with **PointLight2D** nodes.  
-   - To achieve the desired effect of smooth, randomized flashing lights, a script-based solution was implemented, replacing the manual keyframing approach.
+   - To achieve the desired effect of smooth, randomised flashing lights, a script-based solution was implemented, replacing the manual keyframing approach.
 
 3. **Audio Management**  
    - Adding a **volume control slider** and enabling a **playlist of songs** presented difficulties in maintaining proper paths and handling user inputs.  
@@ -132,4 +132,4 @@ While building this project, several challenges were faced, each providing me ma
 ### **🔧 Future Improvements**
 - Add more animations and dances for the character.
 - Integrate multiple lighting patterns for the disco ball.
-- Expand the playlist feature to support user uploads.
+- Expand the playlist feature.
