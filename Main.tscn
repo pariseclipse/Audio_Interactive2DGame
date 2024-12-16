@@ -1,0 +1,274 @@
+[gd_scene load_steps=8 format=3 uid="uid://dlmmggj8vyrqt"]
+
+[ext_resource type="Script" path="res://TitleGrid.gd" id="1_rhtic"]
+[ext_resource type="Texture2D" uid="uid://b4i8a4egke73d" path="res://pose1-removebg-preview.png" id="2_l4jbo"]
+[ext_resource type="Script" path="res://Player.gd" id="3_b7m0y"]
+[ext_resource type="Texture2D" uid="uid://d0sspou5jw87o" path="res://discoball.png" id="4_unyqo"]
+[ext_resource type="Script" path="res://DiscoBall.gd" id="5_jiaq8"]
+[ext_resource type="AudioStream" uid="uid://dx6yey0ymgljk" path="res://apt. - rosé & bruno mars [edit audio].mp3" id="6_wgasa"]
+[ext_resource type="Texture2D" uid="uid://byuh0t4oahobn" path="res://Screenshot_2024-12-16_at_06.19.16-removebg-preview.png" id="7_ud5vg"]
+
+[node name="DiscoGame" type="Node2D"]
+
+[node name="TileGrid" type="Node2D" parent="."]
+position = Vector2(170, 275)
+rotation = 0.31765
+skew = 0.937242
+script = ExtResource("1_rhtic")
+
+[node name="Tile4" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_top = 136.0
+offset_right = 64.0
+offset_bottom = 200.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile5" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 67.0
+offset_top = 136.0
+offset_right = 131.0
+offset_bottom = 200.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile6" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 134.0
+offset_top = 68.0
+offset_right = 198.0
+offset_bottom = 132.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile7" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 67.0
+offset_top = 68.0
+offset_right = 131.0
+offset_bottom = 132.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile8" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_top = 68.0
+offset_right = 64.0
+offset_bottom = 132.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile9" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 134.0
+offset_top = 136.0
+offset_right = 198.0
+offset_bottom = 200.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile11" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 201.0
+offset_top = 68.0
+offset_right = 265.0
+offset_bottom = 132.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile12" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 201.0
+offset_top = 136.0
+offset_right = 265.0
+offset_bottom = 200.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile14" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 268.0
+offset_top = 68.0
+offset_right = 332.0
+offset_bottom = 132.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile15" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 268.0
+offset_top = 136.0
+offset_right = 332.0
+offset_bottom = 200.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile16" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 268.0
+offset_top = 204.0
+offset_right = 332.0
+offset_bottom = 268.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile17" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 201.0
+offset_top = 204.0
+offset_right = 265.0
+offset_bottom = 268.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile18" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 134.0
+offset_top = 204.0
+offset_right = 198.0
+offset_bottom = 268.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile19" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 67.0
+offset_top = 204.0
+offset_right = 131.0
+offset_bottom = 268.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile20" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_top = 204.0
+offset_right = 64.0
+offset_bottom = 268.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile21" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_top = 272.0
+offset_right = 64.0
+offset_bottom = 336.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile22" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 67.0
+offset_top = 272.0
+offset_right = 131.0
+offset_bottom = 336.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile23" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 134.0
+offset_top = 272.0
+offset_right = 198.0
+offset_bottom = 336.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile24" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 201.0
+offset_top = 272.0
+offset_right = 265.0
+offset_bottom = 336.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile25" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 268.0
+offset_top = 272.0
+offset_right = 332.0
+offset_bottom = 336.0
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile26" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = -0.524773
+offset_top = 0.527594
+offset_right = 63.4752
+offset_bottom = 64.5276
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile27" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 66.2532
+offset_top = 0.98757
+offset_right = 130.253
+offset_bottom = 64.9876
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile28" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 133.031
+offset_top = 1.44755
+offset_right = 197.031
+offset_bottom = 65.4475
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile29" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 200.859
+offset_top = 0.852362
+offset_right = 264.859
+offset_bottom = 64.8524
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile30" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 200.859
+offset_top = 0.852362
+offset_right = 264.859
+offset_bottom = 64.8524
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile31" type="ColorRect" parent="TileGrid"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 268.161
+offset_top = 0.784759
+offset_right = 332.161
+offset_bottom = 64.7848
+color = Color(0.689285, 0.689285, 0.689285, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(559, 100)
+scale = Vector2(0.186523, 0.185547)
+texture = ExtResource("2_l4jbo")
+script = ExtResource("3_b7m0y")
+
+[node name="DiscoBall" type="Sprite2D" parent="."]
+position = Vector2(149, -65)
+scale = Vector2(0.157798, 0.148333)
+texture = ExtResource("4_unyqo")
+script = ExtResource("5_jiaq8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(160, 160)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_wgasa")
+autoplay = true
+parameters/looping = true
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(175, 204.5)
+scale = Vector2(2.29393, 1.51972)
+texture = ExtResource("7_ud5vg")
+metadata/_edit_lock_ = true
