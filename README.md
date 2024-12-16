@@ -89,7 +89,7 @@ The music used in this project is sourced from YouTube and may be subject to cop
    ![Bar Interaction](./bar.png)
 
 3. **Interactive DJ Booth**:  
-   ![DJ Booth](.djmusic.png)
+   ![DJ Booth](./djmusic.png)
 
 ---
 
