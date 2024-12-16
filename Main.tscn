@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://f2cdlcfqg7w8" path="res://pose3.png" id="5_nmpoh"]
 [ext_resource type="Texture2D" uid="uid://dyawdk0yq6qnq" path="res://drink.png" id="6_trl4i"]
 [ext_resource type="AudioStream" uid="uid://dx6yey0ymgljk" path="res://audio/apt.mp3" id="6_wgasa"]
-[ext_resource type="Texture2D" uid="uid://c0tuc4y5bvx4s" path="res://disco.png" id="7_efucq"]
+[ext_resource type="Texture2D" uid="uid://b7onbq5d778gm" path="res://disco.png" id="7_efucq"]
 [ext_resource type="Texture2D" uid="uid://byuh0t4oahobn" path="res://room.png" id="7_ud5vg"]
 [ext_resource type="Texture2D" uid="uid://boesmba235hwh" path="res://danceButton.png" id="10_qsbs3"]
 [ext_resource type="Script" path="res://Button.gd" id="11_6ohpv"]
