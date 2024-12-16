@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 200  # Movement speed
+@export var speed = 170  # Movement speed
 
 func _physics_process(delta):
 	var direction = Vector2.ZERO
