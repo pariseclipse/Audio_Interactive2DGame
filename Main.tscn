@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dlmmggj8vyrqt"]
+[gd_scene load_steps=25 format=3 uid="uid://dlmmggj8vyrqt"]
 
 [ext_resource type="Script" path="res://TitleGrid.gd" id="1_rhtic"]
 [ext_resource type="Texture2D" uid="uid://b4i8a4egke73d" path="res://post1.png" id="2_l4jbo"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" path="res://bar_trigger.gd" id="12_452v3"]
 [ext_resource type="Texture2D" uid="uid://bdkmmqgfaymvv" path="res://djbooth.png" id="14_bitdc"]
 [ext_resource type="Script" path="res://DJBoothTrigger.gd" id="15_dkkfo"]
+[ext_resource type="Script" path="res://lights_container.gd" id="16_kylo4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1fin2"]
 animations = [{
@@ -46,6 +47,18 @@ size = Vector2(462, 208)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m7oxk"]
 size = Vector2(522.401, 445.187)
+
+[sub_resource type="Gradient" id="Gradient_63frg"]
+offsets = PackedFloat32Array(0, 0.840909, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.840909, 0.840909, 0.840909, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t0o0f"]
+gradient = SubResource("Gradient_63frg")
+
+[sub_resource type="Gradient" id="Gradient_60rqe"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k4u7w"]
+gradient = SubResource("Gradient_60rqe")
 
 [node name="DiscoGame" type="Node2D"]
 
@@ -316,6 +329,7 @@ script = ExtResource("5_jiaq8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(160, 190)
+zoom = Vector2(2.4, 2.4)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_wgasa")
@@ -330,13 +344,14 @@ texture = ExtResource("7_ud5vg")
 metadata/_edit_lock_ = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = -393.0
-offset_top = 400.0
-offset_right = 182.0
-offset_bottom = 872.0
+offset_left = -381.0
+offset_top = 415.0
+offset_right = 194.0
+offset_bottom = 887.0
 scale = Vector2(0.2, 0.2)
 icon = ExtResource("10_qsbs3")
 script = ExtResource("11_6ohpv")
+metadata/_edit_use_anchors_ = true
 
 [node name="BarTrigger" type="Area2D" parent="."]
 collision_layer = 2
@@ -405,6 +420,22 @@ script = ExtResource("15_dkkfo")
 position = Vector2(-10.9747, 24.1025)
 shape = SubResource("RectangleShape2D_m7oxk")
 metadata/_edit_lock_ = true
+
+[node name="LightsContainer" type="Node2D" parent="."]
+script = ExtResource("16_kylo4")
+
+[node name="PointLight1" type="PointLight2D" parent="LightsContainer"]
+position = Vector2(414, 225)
+scale = Vector2(10.3594, 9.17188)
+color = Color(0.909426, 8.27849e-05, 0.71193, 1)
+texture = SubResource("GradientTexture2D_t0o0f")
+
+[node name="PointLight2" type="PointLight2D" parent="LightsContainer"]
+position = Vector2(-238, 204)
+rotation = -3.11192
+scale = Vector2(7.53125, 8.95312)
+color = Color(0, 0, 0.498039, 1)
+texture = SubResource("GradientTexture2D_k4u7w")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="body_entered" from="BarTrigger" to="BarTrigger" method="_on_body_entered"]
