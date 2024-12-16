@@ -1,17 +1,17 @@
 [gd_scene load_steps=8 format=3 uid="uid://dlmmggj8vyrqt"]
 
 [ext_resource type="Script" path="res://TitleGrid.gd" id="1_rhtic"]
-[ext_resource type="Texture2D" uid="uid://b4i8a4egke73d" path="res://pose1-removebg-preview.png" id="2_l4jbo"]
+[ext_resource type="Texture2D" uid="uid://b4i8a4egke73d" path="res://post1.png" id="2_l4jbo"]
 [ext_resource type="Script" path="res://Player.gd" id="3_b7m0y"]
 [ext_resource type="Texture2D" uid="uid://d0sspou5jw87o" path="res://discoball.png" id="4_unyqo"]
 [ext_resource type="Script" path="res://DiscoBall.gd" id="5_jiaq8"]
-[ext_resource type="AudioStream" uid="uid://dx6yey0ymgljk" path="res://apt. - rosé & bruno mars [edit audio].mp3" id="6_wgasa"]
-[ext_resource type="Texture2D" uid="uid://byuh0t4oahobn" path="res://Screenshot_2024-12-16_at_06.19.16-removebg-preview.png" id="7_ud5vg"]
+[ext_resource type="AudioStream" uid="uid://dx6yey0ymgljk" path="res://apt.mp3" id="6_wgasa"]
+[ext_resource type="Texture2D" uid="uid://byuh0t4oahobn" path="res://room.png" id="7_ud5vg"]
 
 [node name="DiscoGame" type="Node2D"]
 
 [node name="TileGrid" type="Node2D" parent="."]
-position = Vector2(170, 275)
+position = Vector2(180, 265)
 rotation = 0.31765
 skew = 0.937242
 script = ExtResource("1_rhtic")
