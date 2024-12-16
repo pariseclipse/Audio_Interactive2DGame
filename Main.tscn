@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dlmmggj8vyrqt"]
+[gd_scene load_steps=18 format=3 uid="uid://dlmmggj8vyrqt"]
 
 [ext_resource type="Script" path="res://TitleGrid.gd" id="1_rhtic"]
 [ext_resource type="Texture2D" uid="uid://b4i8a4egke73d" path="res://post1.png" id="2_l4jbo"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://boesmba235hwh" path="res://danceButton.png" id="10_qsbs3"]
 [ext_resource type="Script" path="res://Button.gd" id="11_6ohpv"]
 [ext_resource type="Script" path="res://bar_trigger.gd" id="12_452v3"]
+[ext_resource type="Texture2D" uid="uid://c0qw4exral5jg" path="res://dj.png" id="14_q4x77"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1fin2"]
 animations = [{
@@ -45,7 +46,7 @@ size = Vector2(462, 208)
 [node name="DiscoGame" type="Node2D"]
 
 [node name="TileGrid" type="Node2D" parent="."]
-position = Vector2(180, 265)
+position = Vector2(157, 280)
 rotation = 0.31765
 skew = 0.937242
 script = ExtResource("1_rhtic")
@@ -282,24 +283,25 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Player" type="CharacterBody2D" parent="."]
 visibility_layer = 3
+z_index = 1
 position = Vector2(559, 100)
 scale = Vector2(0.186523, 0.185547)
 script = ExtResource("3_b7m0y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(-2031.92, 1271.92)
+position = Vector2(-1881.81, 1131.79)
 sprite_frames = SubResource("SpriteFrames_1fin2")
 animation = &"dance"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 light_mask = 3
-position = Vector2(-2026.56, 1266.53)
+position = Vector2(-1897.89, 1104.84)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xgoq0")
 
 [node name="DrinkSprite" type="Sprite2D" parent="Player"]
 visible = false
-position = Vector2(-2123.06, 1282.69)
+position = Vector2(-1994.39, 1153.35)
 scale = Vector2(0.357985, 0.296053)
 texture = ExtResource("6_trl4i")
 
@@ -364,6 +366,11 @@ offset_top = 94.0
 offset_right = 195.0
 offset_bottom = 125.0
 text = "Yes"
+
+[node name="DJBooth" type="Sprite2D" parent="."]
+position = Vector2(491, 297)
+scale = Vector2(0.455589, 0.352661)
+texture = ExtResource("14_q4x77")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="body_entered" from="BarTrigger" to="BarTrigger" method="_on_body_entered"]
